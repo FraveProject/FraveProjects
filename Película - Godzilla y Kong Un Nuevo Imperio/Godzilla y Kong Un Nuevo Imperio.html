@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Godzilla y Kong: Un Nuevo Imperio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: rgba(0, 0, 0, 1);
+        color: beige;
+      }
+      
+      .header-container {
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          rgb(0, 0, 0,) 100%/** degrade parte inferior del header **/
+        );
+      }
+
+      .bg {
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+      }
+
+      .header-container {
+        background: url("https://www.comingsoon.net/wp-content/uploads/sites/3/2024/06/Untitled-design-89-2.jpg") center center;
+        background-size: cover;
+      }
+
+      .header {
+        background: linear-gradient(
+          to top,
+          transparent 90%,
+          rgb(0, 0, 0,0.9) /** degrade parte superior del header **/
+        );
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+      }
+
+      /** Sombra inferior **/
+      .sombra-inferior {
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          rgb(1, 1, 1)/** degrade parte inferior del header **/
+        );
+      }
+
+      .movie-info {
+        padding: 0vw 5vw 0vw 5vw;
+        margin: auto;
+        box-sizing: border-box;
+        max-width: 1600px; ///////
+      }
+
+      .portada {
+        border-radius: 5px;
+        display: block;
+        width: 320px;
+      }
+
+      .porter-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .top-header {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      h1 {
+        margin-bottom: 4vh;
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      .movie-description {
+        color: #a1a1a1;
+        text-align: justify;
+        margin: 5vh 0vh 3vh 0vh;
+        background-color: rgba(78, 78, 78, 0.2);
+        border-radius: 5px;
+        padding: 15px;
+        backdrop-filter: blur(5px);
+        position: relative;
+      }
+
+      .icon {
+        width: 30px;
+        color: #e9e9e9;
+      }
+
+      .rating {
+        display: inline-block;
+        font-size: 30px;
+      }
+
+      .duration {
+        display: inline-block;
+      }
+
+      .otros {
+        margin-top: 22px;
+      }
+
+      span {
+        color: #c4b923;
+        font-weight: bold;
+      }
+
+      .duration,
+      .age,
+      .category {
+        margin-bottom: 10px;
+        margin-top: 3px;
+      }
+
+      .movie-container {
+        height: 700px;
+        background: linear-gradient(to bottom, rgb(1, 1, 1
+        ), rgb(17, 17, 29)100%);
+        background-color: rgba(78, 78, 78, 0.2);
+      }
+
+      .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+      }
+
+      .logo {
+        width: 5vw;
+        font-size: 10px;
+        display: block;
+      }
+
+      .menu .navbar ul li {
+        position: relative;
+        float: left;
+  
+      }
+
+      .menu .navbar ul li a {
+        font-size: 20px;
+        padding: 20px;
+        color: white;
+        display: block;
+        
+      }
+
+      .menu .navbar ul li a:hover {
+        background: linear-gradient(to top, transparent 60%, rgba(66, 64, 64, 0.8));
+        color: #ff2f28;
+      }
+
+      #menu {
+        display: none;
+      }
+
+      .menu-icono {
+        width: 25px;
+      }
+
+      .menu label {
+        cursor: pointer;
+        display: none;
+      }
+
+      .header-content {
+        display: flex;
+        width: 100%;
+      }
+
+      .header-1 {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        align-self: flex-end;
+      }
+
+      .header-1 img {
+        width: 300px;
+      }
+
+      .header-2 {
+        width: 50%;
+        margin-top: 80px;
+        text-align: end;
+      }
+
+      .header-2 h1 {
+        color: #ffffff72;
+        font-size: 80px;
+        line-height: 80px;
+      }
+
+      .header-2 img {
+        width: 70px;
+      }
+
+      .btn-1 {
+        display: inline-block;
+        padding: 7px 20px;
+        background-color: #c90f08;
+        color: #ffffff;
+        font-size: 20px;
+        border-radius: 5px;
+      }
+
+      .iframe-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      footer {
+        background-color: rgb(21, 21, 34);
+        background: linear-gradient(to bottom, rgb(18, 19, 30) 10%, rgb(9, 7, 17));
+        padding: 35px;
+      }
+
+      .footer-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10vw;
+      }
+
+      footer svg {
+        width: 37px;
+      }
+
+      footer i {
+        font-size: 37px;
+        color: #ffff;
+      }
+
+      footer img {
+        width: 100px;
+      }
+
+      .footer-element-2 {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .bottom {
+        color: rgb(73, 80, 95);
+      }
+
+      . {
+        position: absolute; 
+        height: 85px;
+        width: 60vh;
+        background-color: rgb(4, 4, 4);
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="header-container">
+      
+      <div class="sombra-inferior">
+
+        <div class="menu container">
+          <a href="../Inicio/OnlyPelis.html" target="_blank" class="logo">
+            <img class="logo" src="logo.png">
+            
+          </a>
+          <input type="checkbox" id="menu" />
+          <label for="menu">
+            <img src="menu.png" class="menu-incono" alt="menu" />
+          </label>
+          <nav class="navbar">
+            <ul>
+              <li><a href="../Inicio/index.html">INICIO</a></li>
+              <li><a href="../Nosotros/Nosotros.html">NOSOTROS</a></li>
+              <li><a href="../Explorar Películas/MasPelículas.html">PELICULAS</a></li>
+              <li><a href="../Contacto/contact.html">CONTACTO</a></li>
+            </ul>
+          </nav>
+          <a href="../Registro/login.html" target="_blank" class="btn-1">Login</a>
+        </div>
+        
+       
+
+        <header class="header">
+          <article class="movie-info">
+            <div class="top-header">
+              <div class="board">
+                <h1>Godzilla y Kong: Un Nuevo Imperio</var></h1>
+                <img src="star-solid.svg" class="icon" />
+                <p class="rating">3.0</p>
+                <div class="otros">
+                  <p>Duración:</p>
+                  <p class="duration"><span>1h 56min</span></p>
+  
+                  <p>Edad:</p>
+                  <p class="age"><span>+13</span></p>
+  
+                  <p>Categoría:</p>
+                  <p class="category"><span> Ciencia Ficción, Acción, Aventura</span></p>
+                </div>
+              </div>
+  
+              <div class="poster-container">
+                <img class="portada" src="https://musicart.xboxlive.com/7/954a6a00-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080" />
+              </div>
+            </div>
+            <div class="movie-description">
+              <p class="description">
+                Una aventura cinematográfica completamente nueva, que enfrentará al todopoderoso Kong y al temible Godzilla contra una colosal amenaza desconocida escondida dentro de nuestro mundo. La nueva y épica película profundizará en las historias de estos titanes, sus orígenes y los misterios de Isla Calavera y más allá, mientras descubre la batalla mítica que ayudó a forjar a estos seres extraordinarios y los unió a la humanidad para siempre.
+              </p>
+            </div>
+          </article>
+        </header>
+
+
+      </div>
+    </div>
+
+    <div class="movie-container">
+      
+      <div class="parche">
+      </div>
+      <div class="iframe-container">
+        <IFRAME src="https://player.cuevana.biz/player.php?h=xPGVAASKY7nq8KaEgwASgW.S.E5Wr8HwqVsXXKaLwa4jcxTar5R5z5rnqpRyHEXhKM.HqZ0Ub8LWQNIUghtai83oBehqrOdNIzAvWZFfU1RlN9ZPd6M1QPa7KAMQyPh8Wwm6bw2mj8f25stL8Ty9Ug--" FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO WIDTH=1152 HEIGHT=648 allowfullscreen></IFRAME>
+      </div>
+
+    </div>
+
+
+    <footer>
+
+      <div class="footer-container">
+        <div class="footer-element-1">
+          <img src="logo.png">
+        </div>
+        <p class="bottom"> &copy; 2024 CinePlus. Todos los derechos reservados.</p>
+        <div class="footer-element-2">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#ffffff" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+        </div>
+      </div>
+
+      
+    </footer>
+  </body>
+</html>

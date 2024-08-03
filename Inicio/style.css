@@ -1,0 +1,398 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    margin-top: 80px;
+    background-color: rgb(18, 19, 30);
+    font-family: "Roboto", sans-serif;
+    color: #dddddd;
+}
+
+.movies-container {
+    padding-top: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.header {
+    border-radius: 10px;
+    width: 70vw;
+    background: url(bg.jpg);
+    background-position: center; 
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: flex-end;
+    margin: auto;
+    box-shadow: 0px 0px 20px rgb(116, 111, 111);
+}
+
+.slider-frame {
+    margin: 50px auto 0;
+    overflow: hidden;
+
+    animation: slide 15s infinite ease-in-out;
+}
+
+.slider-frame ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+}
+
+.slider-frame li {
+    list-style: none;
+    width: 100%;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo {
+    width: 100px;
+    color: white;
+}
+
+.menu {
+    background: linear-gradient(to top, transparent ,rgba(10, 10, 10, 0.9));
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 20px;
+    padding: 20px;
+    color: white;
+    display: block;
+}
+
+.menu .navbar ul li a:hover {
+    color: #FF2F28;
+    background: linear-gradient(to top, transparent 60%, rgba(66, 64, 64, 0.8));
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    
+   
+    display: flex;
+    width: 100%;
+}
+
+.header-1 {
+    display: flex;
+    flex-direction: row;
+    width: 50%
+}
+
+.header-1 img {
+    width: 380px;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.header-2 {
+    flex-direction: row;
+    width: 50%;
+    display: flex;
+}
+
+.header-2 h1 {
+    text-align: end;
+    padding: ;
+    color: #cecece72;
+    font-size: 80px;
+}
+
+.header-2 img {
+    margin: auto;
+    width: 100px;
+}
+.btn-1 {
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 5px;
+    background-color: #c90f08;;
+    color:#FFFFFF;
+    font-size: 20px;
+
+}
+
+.btn-2 {
+    font-family: 'Bebas Neue';
+    width: 110px;
+    display: inline-block;
+    padding: 7px 20px;
+    background-color: #df2929;
+    color:#FFFFFF;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.movies {
+    padding: 50px 0 0 0 ;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 1px solid #df2929;
+    width: 60%;
+    margin-bottom: 40px;
+}
+
+.content img {
+    border-radius: 10px;
+}
+
+.box-1 .content p {
+    display: inline;
+    background-color: #c90f08;
+    padding: 3px 5px;
+    border-radius: 3px;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.box-2 .content p {
+    display: inline;
+    background-color: #c90f08;
+    padding: 3px 5px;
+    border-radius: 3px;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.box-3 .content p {
+    display: inline;
+    background: #3622aa;
+    padding: 3px 5px;
+    border-radius: 3px;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+
+
+
+.box-container-1,
+.box-container-2,
+.box-container-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.box-1,
+.box-2,
+.box-3 {
+    display: none;
+    z-index: 100;
+    border-radius: 5px;
+    transition-duration: 70ms;
+}
+
+.box-1:hover, 
+.box-2:hover, 
+.box-3:hover {
+    scale: 1.05;
+}
+
+.box-1:nth-child(1),
+.box-1:nth-child(2),
+.box-1:nth-child(3),
+.box-1:nth-child(4) {
+    display: inline-block;
+}
+
+.box-2:nth-child(1),
+.box-2:nth-child(2),
+.box-2:nth-child(3),
+.box-2:nth-child(4) {
+    display: inline-block
+}
+
+.box-3:nth-child(1),
+.box-3:nth-child(2),
+.box-3:nth-child(3),
+.box-3:nth-child(4) {
+    display: inline-block
+}
+.load-more {
+    margin: 40px 0px 20px;
+    background-color: #473e74;
+    display: inline-block;
+    padding: 5px 4px;
+    border-radius: 15px;
+    border-radius: 3px;
+    color:#dfdfdf;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    justify-content: center;
+    align-self: flex-end;
+    
+}
+
+.content img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.content h3 {
+    color: #d1d1d1;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.content {
+    color: #cfcfcf;
+    font-size: 20px;
+}
+
+.iframe-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  footer {
+    background-color: rgb(21, 21, 34);
+    background: linear-gradient(to bottom, rgb(19, 19, 29) 10%, rgb(9, 7, 17));
+    padding: 35px;
+  }
+
+  .footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10vw;
+  }
+
+  footer svg {
+    width: 37px;
+  }
+
+  footer i {
+    font-size: 37px;
+    color: #ffff;
+  }
+
+  footer img {
+    width: 100px;
+  }
+
+  .footer-element-2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .bottom {
+    color: rgb(73, 80, 95);
+  }
+
+@media (max-width: 991px) {
+    .menu {
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top:100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(3, 3, 3,0.8);
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    .btn-1 {
+        display: none;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .header-content {
+        flex-direction: row;
+        padding: 180px 30px 30px 30px;
+    }
+
+    .header-1 {
+        width: 100%;
+        float: left;
+    }
+
+    .header-2 {
+        width: 100%;
+        text-align: right;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    .movies-container {
+        padding: 20px;
+    }
+
+    .footer {
+        margin-top: 30px;
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+
+
+}

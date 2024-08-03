@@ -1,0 +1,90 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: url('https://vozdelpueblo920am.com/wp-content/uploads/2024/05/d0f889bf-add0-4703-85fc-438abfb6fdbe_16-9-discover-aspect-ratio_default_0.jpg') no-repeat center center fixed; 
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
+.container {
+  background: rgba(255, 255, 255, 0.1); 
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  backdrop-filter: blur(20px);
+  width: 400px;
+}
+
+
+.container h2 {
+  color: aliceblue;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  color: aliceblue;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  background-color: #c43c3c;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+button[type="submit"]:hover {
+  background-color: #c44f4f;
+}
+
+  
